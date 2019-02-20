@@ -1,3 +1,13 @@
+
+// Div de bienvenida y nombres
+const app1 = new Vue({
+    el: '#Bienv',
+    data: {
+        bienvenida : 'Vue.js ',
+        nombres: ['Andes Garcia', 'Leon Avalos', 'Alexis Echavarria']
+    }
+})
+
 //Aca es donde se maneja todo el CRUD de vue.js
 var app = new Vue({
     el: '#app',
