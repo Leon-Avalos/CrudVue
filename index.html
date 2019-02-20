@@ -11,17 +11,20 @@
 
         <h3> {{ titulo}}</h3>
 
+        <!-- Aqui se escribe lo que se quiere guardar -->
         <input type="text" class="form-control my-3" v-model="nuevaActividad" v-on:keyup.enter="agregarActividad">
 
+        <!-- Boton qe se utiluza para poder guardar que se escrbio en la caja de texto-->
         <button class="btn btn-primary" @click="agregarActividad">Agregar</button>
         <div class="mt-3" v-for="(item, index) of actividades">
 
             <div role="alert" :class="['alert', item.estado ? 'alert-success' : 'alert-danger']">
                 <div class="d-flex justify-content-between align-items-center">
-
+                    <!-- Aca es donde se muestran los elementos que se han guardado-->
                     <div>
                         {{index}} - {{item.nombre}} - {{item.estado}}
                     </div>
+                    <!--Eston son los botones de eliminar y de editar(Se cambia el estado de false a true y en sentido contrario)-->
                     <div>
                         <button class="btn btn-success btn-sm" @click="editarActividad(index)">OK</button>
                         <buttton class="btn btn-danger btn-sm" @click="eliminarActividad(index)">X</buttton>
